@@ -1,4 +1,3 @@
-
 require 'json'
 
 class MyMiddleware
@@ -7,7 +6,7 @@ class MyMiddleware
   end
 
   def call(env)
-    status, headers, body = @app1.call(env)
+    _status, _headers, _body = @app1.call(env)
     request = Rack::Request.new(env)
 
     body = {
@@ -24,8 +23,7 @@ class MyMiddleware
 end
 
 class App
-  def call(env)
-  end
+  def call(env); end
 end
 
 use MyMiddleware

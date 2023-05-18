@@ -4,11 +4,10 @@ end
 
 class App
   def call(env)
-    puts env["HTTP_AUTHORIZATION"]
-    [200, {'Content-Type' => 'text/html'}, ["You are loggined successfully"]]
+    puts env['HTTP_AUTHORIZATION']
+    [200, { 'Content-Type' => 'text/html' }, ['You are loggined successfully']]
   end
 end
-
 
 run App.new
 

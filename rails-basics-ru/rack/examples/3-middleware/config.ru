@@ -1,4 +1,3 @@
-
 class MyMiddleware
   def initialize(app1)
     @app1 = app1
@@ -14,18 +13,18 @@ class MyMiddleware
       when 'GET'
         [status, headers, body]
       when 'POST'
-        [201, headers.merge({'x-created' => 'True'}), ['Item was successfully created']]
+        [201, headers.merge({ 'x-created' => 'True' }), ['Item was successfully created']]
       end
     else
-      [404, {}, ["Not Found"]]
+      [404, {}, ['Not Found']]
     end
   end
 end
 
 class App
-  def call(env)
+  def call(_env)
     puts 'app_run'
-    [200, {}, ["success"]]
+    [200, {}, ['success']]
   end
 end
 
