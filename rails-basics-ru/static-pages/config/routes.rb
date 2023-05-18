@@ -2,7 +2,7 @@
 
 Rails.application.routes.draw do
   # BEGIN
-  root "home#index"
+  root 'home#index'
 
   resources :pages, only: :show
   # END
