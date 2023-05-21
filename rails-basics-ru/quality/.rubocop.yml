@@ -1,0 +1,23 @@
+require: rubocop-rails
+
+AllCops:
+  NewCops: enable
+  Exclude:
+    - 'bin/**'
+    - 'db/schema.rb'
+    - 'db/migrate/**'
+    - 'examples/**'
+
+# BEGIN
+Style/Documentation:
+  Enabled: false
+
+Gemspec/RequiredRubyVersion:
+  Enabled: false
+
+Metrics/MethodLength:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+# END
